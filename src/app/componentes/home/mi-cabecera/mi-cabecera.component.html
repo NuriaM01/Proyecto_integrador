@@ -1,0 +1,13 @@
+<nav class="navbar navbar-light bg-light mb-3">
+    <app-logo-app></app-logo-app>
+    <div class="ms-auto">
+        <img src="../../../assets/facebook.png" class="logofih boton me-2" alt="" (click)="irAFacebook()">
+        <img src="../../../assets/instangram.png" class="logofih boton me-2" alt="" (click)="irAInstagram()">
+        <img src="../../../assets/th.jpg" class="logofih boton me-4" alt="" (click)="irAGithub()">
+
+        <input *ngIf="!this.loginService.isLoggedIn" type="button" value="Login" class="boton boton-login"
+            (click)="doLogin()">
+        <input *ngIf="this.loginService.isLoggedIn" type="button" value="Logout" class="boton boton-logout"
+            (click)="doLogout()">
+    </div>
+</nav>

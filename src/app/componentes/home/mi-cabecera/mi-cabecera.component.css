@@ -1,0 +1,18 @@
+.logofih {
+    height: 30px;
+}
+
+.boton {
+    cursor: pointer;
+}
+
+.boton-login {
+    height: 30px;
+    background-color: rgb(100, 116, 221);
+    color: black;
+    border: solid 1px rgb(94, 154, 187);
+}
+
+.boton-login:hover {
+    background-color: rgb(159, 202, 220);
+}

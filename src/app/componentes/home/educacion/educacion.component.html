@@ -1,0 +1,21 @@
+<hr>
+<div class="row mt-4">
+  <div class="col-4">
+    <h2>Educacion</h2>
+  </div>
+  <div class="col">
+  </div>
+</div>
+<div class="row mt-4" *ngFor="let edu of this.datos.educacion ?? []; let idx = index">
+  <div class="col-4">
+    <h3 *ngIf="!this.editando[idx]">{{edu.establecimiento}}</h3>
+    <h3 *ngIf="this.editando[idx]"><input type="text" [(ngModel)]="edu.establecimiento"></h3>
+  </div>
+  <div class="col position-relative">
+    <h4 *ngIf="!this.editando[idx]">{{edu.periodo}}</h4>
+    <h4 *ngIf="this.editando[idx]"><input type="text" [(ngModel)]="edu.periodo"></h4>
+    <app-edit-close [(editando)]="this.editando[idx]"></app-edit-close>
+    <h6 *ngIf="!this.editando[idx]">{{edu.descripcion}}</h6>
+    <h6 *ngIf="this.editando[idx]"><textarea cols="100" rows="5" [(ngModel)]="edu.descripcion"></textarea></h6>
+  </div>
+</div>

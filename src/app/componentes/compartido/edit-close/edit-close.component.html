@@ -1,0 +1,6 @@
+<ng-container *ngIf="this.loginService.isLoggedIn">
+  <img width="40" height="40" src="../../../../assets/edit.svg" alt="Editar" class="es-boton {{this.clasesEdit}}"
+    (click)="this.editClick()">
+  <img *ngIf="!this.ocultarClose" width="40" height="40" src="../../../../assets/close.svg" alt="Close"
+    class="es-boton {{this.clasesClose}}" (click)="this.closeClick()">
+</ng-container>

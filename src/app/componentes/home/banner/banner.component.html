@@ -1,0 +1,33 @@
+<div class="position-relative">
+    <div class="border banner {{this.datos.imagenBanner}}">
+        <app-edit-close [ocultarClose]="true" [(editando)]="this.editandoBanner"
+            clasesEdit="position-absolute edit-descripcion edit-banner">
+        </app-edit-close>
+        <select *ngIf="this.editandoBanner" [(ngModel)]="this.datos.imagenBanner">
+            <option [selected]="this.datos.imagenBanner === 'flores'" value="flores">Imagen de Flores</option>
+            <option [selected]="this.datos.imagenBanner === 'ojo'" value="ojo">Imagen de un ojo</option>
+        </select>
+    </div>
+    <div class="position-relative avatar50">
+        <img src="../../../assets/{{this.datos.imagenAvatar}}.jpg" alt="" class="avatar">
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-4 position-relative">
+        <h2 *ngIf="!this.editandoNombre">{{this.datos.nombre}}</h2>
+        <h2 *ngIf="this.editandoNombre"><input type="text" [(ngModel)]="this.datos.nombre"></h2>
+        <app-edit-close [ocultarClose]="true" [(editando)]="this.editandoNombre"></app-edit-close>
+        <h3 *ngIf="!this.editandoNombre">{{this.datos.puesto}}</h3>
+        <h3 *ngIf="this.editandoNombre"><input type="text" [(ngModel)]="this.datos.puesto"></h3>
+    </div>
+    <div class="col-8 position-relative">
+        <h4 *ngIf="!this.editandoResumen">{{this.datos.titulo?.nombre}}</h4>
+        <h4 *ngIf="this.editandoResumen"><input type="text" [(ngModel)]="this.datos.titulo.nombre"></h4>
+        <h6 *ngIf="!this.editandoResumen">{{this.datos.titulo?.experiencia}}</h6>
+        <h6 *ngIf="this.editandoResumen"><textarea cols="100" rows="5"
+                [(ngModel)]="this.datos.titulo.experiencia"></textarea>
+        </h6>
+        <app-edit-close [(editando)]="this.editandoResumen"></app-edit-close>
+    </div>
+</div>

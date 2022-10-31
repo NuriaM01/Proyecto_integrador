@@ -1,0 +1,76 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.banner {
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    opacity: .7;
+    margin-bottom: 65px;
+}
+
+.banner.flores {
+    background-image: url("assets/imagbanner.jpg");
+}
+
+.banner.ojo {
+    background-image: url("assets/ojo.jpg");
+}
+
+.avatar {
+    position: absolute;
+    left: 20px;
+    bottom: -40px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: solid 4px white;
+    z-index: 1;
+}
+
+.edit-avatar {
+    top: -130px;
+    left: 177px;
+    z-index: 10;
+    background: white;
+    border-radius: 50%;
+    padding: 7px;
+}
+
+.edit-descripcion {
+    top: 0px;
+    right: 35px;
+    z-index: 10;
+    background: white;
+    border-radius: 50%;
+    padding: 7px;
+}
+
+.edit-descripcion.edit-banner {
+    top: 10px;
+    right: 10px;
+}
+
+.close-descripcion {
+    top: 0px;
+    right: 0px;
+    z-index: 10;
+    background: white;
+    border-radius: 50%;
+    padding: 7px;
+}
+
+.avatar50 {
+    top: -50px;
+}
+
+.es-boton {
+    cursor: pointer;
+}
